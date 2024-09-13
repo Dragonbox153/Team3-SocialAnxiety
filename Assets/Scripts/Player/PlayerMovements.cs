@@ -11,7 +11,7 @@ public class PlayerMovements : MonoBehaviour
     private Vector2 moveVector = Vector2.zero;
     [SerializeField] float moveSpeed = 10f;
     private Rigidbody2D rb=null;
-
+    public int stressLevel =0;
 
 
     private void Awake()
