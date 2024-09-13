@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = movementPoints[0].transform.position;
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             UpdatePoint();
+            RotateEnemy();
         }
     }
 
@@ -39,6 +40,33 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             nextPoint = 0;
+        }
+    }
+
+    void RotateEnemy()
+    {
+        Vector3 lookAt = movementPoints[nextPoint].transform.position - transform.position;
+        if (lookAt.x == 0)
+        {
+            if (lookAt.y > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 180);
+            }
+        }
+        else
+        {
+            if (lookAt.x > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 270);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 90);
+            }
         }
     }
 }
