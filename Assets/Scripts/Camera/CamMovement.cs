@@ -14,7 +14,7 @@ public class CamMovement : MonoBehaviour
     public GameObject Player;
 
     private int variableValue;
-    private int isIncreasing;
+    private int isIncreasing=0;
 
     // Start is called before the first frame update
     void Start()
@@ -65,32 +65,41 @@ public class CamMovement : MonoBehaviour
         if (stressLevel <= 20)
         {
             zoom = 1;
-            cam.orthographicSize = camSize[0];
+            //cam.orthographicSize = camSize[0];
         }
         else if (stressLevel > 20 && stressLevel <= 40)
         {
             zoom = 2;
             //cam.orthographicSize = Mathf.Lerp(camSize[0], camSize[1],t);
             //t += 0.5f * Time.deltaTime;
-            cam.orthographicSize = camSize[1];
+            //cam.orthographicSize = camSize[1];
         }
         else if (stressLevel > 40 && stressLevel <= 60)
         {
             zoom = 3;
             //cam.orthographicSize = Mathf.Lerp(camSize[1], camSize[2], t);
             //t += 0.5f * Time.deltaTime;
-            cam.orthographicSize = camSize[2];  
+            //cam.orthographicSize = camSize[2];  
         }
         else if (stressLevel > 60 && stressLevel <= 80)
         {
             zoom = 4;
-            cam.orthographicSize = camSize[3];
+            //cam.orthographicSize = camSize[3];
         }
         else if (stressLevel > 80 && stressLevel <=99)
         {
             zoom = 5;
-            cam.orthographicSize = camSize[4];
+            //cam.orthographicSize = camSize[4];
         }
         Debug.Log(isIncreasing);
+        if(isIncreasing ==0)
+        {
+
+        }
+        else if (isIncreasing > 0 && zoom>=2)
+        {
+            cam.orthographicSize = Mathf.Lerp(camSize[zoom-2], camSize[zoom-1],t);
+            t += 0.5f * Time.deltaTime;
+        }
     }
 }
