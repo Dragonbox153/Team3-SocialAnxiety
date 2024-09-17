@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3010105978388401234}
   - component: {fileID: 3122758574173120339}
   - component: {fileID: 2985323311467346819}
+  - component: {fileID: 995598695038278949}
   m_Layer: 0
   m_Name: LineOfSight
   m_TagString: Untagged
@@ -133,6 +134,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &995598695038278949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633369040435852090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3702ed40191c18143b0614bc5fa98156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7984773795140220496
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +262,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4158057970731649888
 MonoBehaviour:
   m_ObjectHideFlags: 0
