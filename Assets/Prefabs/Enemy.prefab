@@ -270,7 +270,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   rigidbody: {fileID: 4140607513055128031}
-  speed: 10
+  speed: 20
 --- !u!58 &5076493302616051659
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -472,6 +472,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4158057970731649888, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
+      propertyPath: speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158057970731649888, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
       propertyPath: 'movementPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 878505498}
@@ -714,6 +718,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4158057970731649888, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
+      propertyPath: speed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4158057970731649888, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
       propertyPath: movementPoints.Array.size
       value: 2
@@ -6501,6 +6509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4158057970731649888, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
+      propertyPath: speed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4158057970731649888, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
       propertyPath: movementPoints.Array.size
       value: 4
