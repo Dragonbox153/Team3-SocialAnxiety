@@ -21,9 +21,12 @@ public class CamMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float stressLevel = Player.gameObject.GetComponent<PlayerMovements>().stressLevel;
+
         Vector3 newPos= new Vector3(target.position.x,target.position.y,-2);
         transform.position = Vector3.Slerp(transform.position,newPos,followSpeed*Time.deltaTime);
+
+
+        float stressLevel = Player.gameObject.GetComponent<PlayerMovements>().stressLevel;
         if (t > 1.0f)
         {
             t = 0.0f;
@@ -38,7 +41,7 @@ public class CamMovement : MonoBehaviour
             zoom = 2;
             //cam.orthographicSize = Mathf.Lerp(camSize[0], camSize[1],t);
             //t += 0.5f * Time.deltaTime;
-            cam.orthographicSize = camSize[2];
+            cam.orthographicSize = camSize[1];
         }
         else if (stressLevel > 40 && stressLevel <= 60)
         {
