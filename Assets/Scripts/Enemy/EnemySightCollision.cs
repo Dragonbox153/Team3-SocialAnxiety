@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemySightCollision : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.tag == "Player")
+        if (collision.tag == "Player")
         {
-            collision.gameObject.transform.GetChild(0).GetComponent<PlayerMovements>().stressLevel++;
+            collision.gameObject.GetComponent<PlayerMovements>().stressLevel++;
         }
     }
 }
