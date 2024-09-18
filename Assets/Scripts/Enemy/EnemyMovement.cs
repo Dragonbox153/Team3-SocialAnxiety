@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position != movementPoints[nextPoint].transform.position)
+        if (transform.position != movementPoints[nextPoint].transform.position)
         {
             rigidbody.MovePosition(Vector2.MoveTowards(transform.position, movementPoints[nextPoint].transform.position, speed * Time.deltaTime));
         }

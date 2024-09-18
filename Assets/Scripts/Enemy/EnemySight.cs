@@ -1,26 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 
 public class EnemySight : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    RaycastHit2D hit;
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Player")
+        Vector2 sightPos = transform.GetChild(0).gameObject.transform.position;
+        hit = Physics2D.Raycast(transform.position, sightPos, 5, LayerMask.GetMask("Default"));
+        Debug.Log(transform.GetChild(0).gameObject.transform.position);
+        if (hit.collider != null)
         {
-            collision.gameObject.GetComponent<PlayerMovements>().stressLevel++;
+            float dist = Vector2.Distance(transform.position, hit.point);
+            transform.GetChild(0).gameObject.transform.localScale = new Vector3(1, dist, 1);
         }
     }
 }
