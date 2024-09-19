@@ -292,6 +292,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followSpeed: 3
   target: {fileID: 1997657204}
+  camSize:
+  - 4
+  - 2.75
+  - 2.5
+  - 2.25
+  - 2
   Player: {fileID: 1997657199}
 --- !u!4 &630815304 stripped
 Transform:
@@ -523,6 +529,10 @@ PrefabInstance:
     - target: {fileID: 5685547238997817335, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
+      propertyPath: moveSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

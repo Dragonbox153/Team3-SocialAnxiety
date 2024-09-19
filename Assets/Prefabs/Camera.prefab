@@ -107,4 +107,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followSpeed: 3
   target: {fileID: 3899195567978484865, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
+  camSize:
+  - 4
+  - 3.5
+  - 3
+  - 2.5
+  - 2
   Player: {fileID: 4433153645979490088, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
