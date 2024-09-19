@@ -146,7 +146,7 @@ RectTransform:
   m_GameObject: {fileID: 126069370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.16, y: 1.16, z: 1.16}
+  m_LocalScale: {x: 3.1, y: 3.1, z: 3.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 875690537}
@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 96, y: 72}
+  m_AnchoredPosition: {x: 215, y: 168}
   m_SizeDelta: {x: 112.39499, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126069372
@@ -610,16 +610,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260355603}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26158574, w: 0.9651803}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 126069371}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.328}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5, y: -38.597473}
+  m_AnchoredPosition: {x: 0.50000775, y: -38.597473}
   m_SizeDelta: {x: 36.8849, y: 27.2244}
   m_Pivot: {x: 0.9022283, y: 0.19933319}
 --- !u!114 &1260355605
@@ -839,14 +839,14 @@ RectTransform:
   m_GameObject: {fileID: 1742273165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
+  m_LocalScale: {x: 3.13, y: 3.13, z: 3.13}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1265865637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -62, y: 72.8}
+  m_AnchoredPosition: {x: -106, y: 180}
   m_SizeDelta: {x: 53.741913, y: 99.2064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742273167
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7784889955259472116, guid: 1103d4d954cef414a89c936a18b53dff, type: 3}
+  m_Sprite: {fileID: -2844216959244199053, guid: dbc1f4e2e9d5f74419b4a9593e880e5c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
