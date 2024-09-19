@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: ebe11b71e9780c340b2a98090cb32a3a
+guid: d8f51bf7861f2ac4bbb4a66583b4f78b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5156776694448688124
-    second: bar_0
-  - first:
-      213: 2978572862657520574
-    second: bar_1
+      213: -3215498983914241363
+    second: wall_eyesopen_front_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bar_0
+      name: wall_eyesopen_front_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 964
-        height: 889
+        width: 648
+        height: 648
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,29 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cfb80a2f41d809740800000000000000
-      internalID: 5156776694448688124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bar_1
-      rect:
-        serializedVersion: 2
-        x: 811
-        y: 0
-        width: 8
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb3e158cc34065920800000000000000
-      internalID: 2978572862657520574
+      spriteID: da28928e5b04063d0800000000000000
+      internalID: -3215498983914241363
       vertices: []
       indices: 
       edges: []
@@ -154,9 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      bar_0: 5156776694448688124
-      bar_1: 2978572862657520574
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
