@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wall_eyesopen_front_0: -3215498983914241363
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
