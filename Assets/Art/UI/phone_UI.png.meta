@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 601cd93ab79850540aec817cdbc208bd
+guid: a78f411580c58eb45aaf01c3f4f765f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3891499200088546803
-    second: wall_eyesclose_front_0
+      213: -1511681544064676450
+    second: phone_UI_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall_eyesclose_front_0
+      name: phone_UI_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 648
-        height: 648
+        x: 622
+        y: 132
+        width: 656
+        height: 1210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3fd9ef887e1610630800000000000000
-      internalID: 3891499200088546803
+      spriteID: e9dc28815ad650be0800000000000000
+      internalID: -1511681544064676450
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      wall_eyesclose_front_0: 3891499200088546803
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
