@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4140607513055128031, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4158057970731649888, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
       propertyPath: speed
       value: 40
@@ -86,4 +90,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3702ed40191c18143b0614bc5fa98156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4433153645979490088, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
