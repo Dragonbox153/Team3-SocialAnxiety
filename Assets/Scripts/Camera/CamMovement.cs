@@ -8,7 +8,7 @@ public class CamMovement : MonoBehaviour
 {
     public float followSpeed = 3f;
     public Transform target;
-    private float[] camSize ={8,6,4,2,1};
+    public float[] camSize ={8,6,4,2,1};
     static float t = 0.0f;
     Camera cam;
     public GameObject Player;
