@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: dbc1f4e2e9d5f74419b4a9593e880e5c
+guid: 3c7b0d31f1bd44849806754ea33ab412
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2844216959244199053
-    second: eye4_0
-  - first:
-      213: -3714998780347291797
-    second: eye4_1
+      213: -4489776719316630005
+    second: "\u4ECE\u9009\u533A-2_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eye4_0
+      name: "\u4ECE\u9009\u533A-2_0"
       rect:
         serializedVersion: 2
-        x: 726
-        y: 698
-        width: 185
-        height: 126
+        x: 0
+        y: 0
+        width: 212
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,29 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37b9b10bebf4788d0800000000000000
-      internalID: -2844216959244199053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eye4_1
-      rect:
-        serializedVersion: 2
-        x: 749
-        y: 693
-        width: 164
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b67e36cca4ca17cc0800000000000000
-      internalID: -3714998780347291797
+      spriteID: b0640549cdb11b1c0800000000000000
+      internalID: -4489776719316630005
       vertices: []
       indices: 
       edges: []
@@ -155,8 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      eye4_0: -2844216959244199053
-      eye4_1: -3714998780347291797
+      "\u4ECE\u9009\u533A-2_0": -4489776719316630005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
