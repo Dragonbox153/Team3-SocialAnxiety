@@ -11152,11 +11152,11 @@ MonoBehaviour:
   - 2.25
   - 2
   circleIntensity:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
+  - 0.6
+  - 0.68
+  - 0.76
+  - 0.84
+  - 0.9
   Player: {fileID: 1905714500}
 --- !u!81 &1228821530
 AudioListener:
@@ -11650,7 +11650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433153645979490088, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4433153645979490088, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
       propertyPath: m_Layer
