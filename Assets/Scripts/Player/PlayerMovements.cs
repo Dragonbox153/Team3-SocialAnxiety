@@ -19,6 +19,7 @@ public class PlayerMovements : MonoBehaviour
     {
         input=new CustomInputs();
         rb=GetComponent<Rigidbody2D>();
+        stressLevel = 0;
     }
 
     private void OnEnable()
