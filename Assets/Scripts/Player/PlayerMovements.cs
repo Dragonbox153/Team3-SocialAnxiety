@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerMovements : MonoBehaviour
@@ -18,6 +19,7 @@ public class PlayerMovements : MonoBehaviour
     {
         input=new CustomInputs();
         rb=GetComponent<Rigidbody2D>();
+        stressLevel = 0;
     }
 
     private void OnEnable()
@@ -51,6 +53,16 @@ public class PlayerMovements : MonoBehaviour
         rb.velocity = moveVector*moveSpeed;
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Goal")
+        {
+            Debug.Log(collision.gameObject.name);
+        }
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {

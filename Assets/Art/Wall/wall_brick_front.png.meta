@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0b89a55925e8c564480b89de86e0bbca
+guid: 29b40043fba8f644794ba10aee55e4ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5274387902573506914
-    second: eye2_red_0
+      213: 6405097587653919747
+    second: wall_brick_front_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 648
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eye2_red_0
+      name: wall_brick_front_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 139
-        height: 187
+        width: 648
+        height: 648
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9e0d73c52c9dc6b0800000000000000
-      internalID: -5274387902573506914
+      spriteID: 304c2dff15a73e850800000000000000
+      internalID: 6405097587653919747
       vertices: []
       indices: 
       edges: []
@@ -131,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      eye2_red_0: -5274387902573506914
+      wall_brick_front_0: 6405097587653919747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
