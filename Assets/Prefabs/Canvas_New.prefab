@@ -730,6 +730,7 @@ GameObject:
   - component: {fileID: 4408980568050444804}
   - component: {fileID: 6392075863195930463}
   - component: {fileID: 4615014430128324131}
+  - component: {fileID: 8226845231291112925}
   m_Layer: 5
   m_Name: pressure_bar
   m_TagString: Untagged
@@ -800,6 +801,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8226845231291112925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768689875717759425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e48ea2e36316742bd99fa91f49483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackEyes:
+  - {fileID: 2420886844973182211, guid: e185d3aca64de9944a23fe53109b3155, type: 3}
+  - {fileID: 4864993932728318626, guid: 5290708d8520b9847b11d1d2c884c970, type: 3}
+  - {fileID: 1749559659126183072, guid: 9f13446c4f01a6344877e1dd14c94228, type: 3}
+  - {fileID: -2844216959244199053, guid: dbc1f4e2e9d5f74419b4a9593e880e5c, type: 3}
+  redEyes:
+  - {fileID: 4994418360521501058, guid: d985d0f9e4c51d7448a6d49ab628733d, type: 3}
+  - {fileID: -5274387902573506914, guid: 0b89a55925e8c564480b89de86e0bbca, type: 3}
+  - {fileID: -5914128803151099888, guid: 7beae69dc828929489d293f97f260329, type: 3}
+  - {fileID: -7784889955259472116, guid: 1103d4d954cef414a89c936a18b53dff, type: 3}
 --- !u!1 &4132830076595549639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,7 +1236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4994418360521501058, guid: d985d0f9e4c51d7448a6d49ab628733d, type: 3}
+  m_Sprite: {fileID: 2420886844973182211, guid: e185d3aca64de9944a23fe53109b3155, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

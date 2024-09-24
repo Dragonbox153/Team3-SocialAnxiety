@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aadbef3d29eb2c43a8b3cc2f0bcece9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
   stressIncrease: 2
   timeToIncrease: 1
+  player: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
 --- !u!1 &4647303682638613757
 GameObject:
   m_ObjectHideFlags: 0
