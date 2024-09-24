@@ -15,7 +15,7 @@ public class EnemySightCollision : MonoBehaviour
         if (collision.tag == "Player")
         {
             onred = true;
-            Debug.Log("HI");
+            //Debug.Log("HI");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -33,7 +33,7 @@ public class EnemySightCollision : MonoBehaviour
         {
             time = 0;
             player.gameObject.GetComponent<PlayerMovements>().stressLevel +=stressIncrease;
-            Debug.Log(player.gameObject.GetComponent<PlayerMovements>().stressLevel);
+            //Debug.Log(player.gameObject.GetComponent<PlayerMovements>().stressLevel);
         }
     }
 }
