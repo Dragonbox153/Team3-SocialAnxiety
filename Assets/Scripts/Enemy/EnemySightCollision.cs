@@ -9,9 +9,9 @@ public class EnemySightCollision : MonoBehaviour
     [SerializeField] PlayerMovements player;
     private bool onred;
     float time = 0;
-    private void OnTriggerEntry2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.tag == "Player")
         {
             onred = true;
@@ -19,15 +19,20 @@ public class EnemySightCollision : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        onred = false;
+        if (collision.tag == "Player")
+        {
+            onred = false;
+
+        }
     }
     private void Update()
     {
         time += Time.deltaTime;
-        if (onred)
+        if (onred && time>=timeToIncrease)
         {
-            player.gameObject.GetComponent<PlayerMovements>().stressLevel += stressIncrease;
             time = 0;
+            player.gameObject.GetComponent<PlayerMovements>().stressLevel +=stressIncrease;
+            Debug.Log(player.gameObject.GetComponent<PlayerMovements>().stressLevel);
         }
     }
 }
