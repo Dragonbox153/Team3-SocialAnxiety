@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      _cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4850462254076358439&skey=@crypt_a7fcca91_44821ca358e4a699392f8d1cbe01c056&mmweb_appid=wx_webfilehelper_0: 6390879871636416955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
