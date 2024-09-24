@@ -6,9 +6,14 @@ public class EnemySightCollision : MonoBehaviour
 {
     [SerializeField] int stressIncrease = 2;
     [SerializeField] float timeToIncrease = 0.5f;
-    [SerializeField] PlayerMovements player;
+    PlayerMovements player;
     private bool onred;
     float time = 0;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovements>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,11 +34,12 @@ public class EnemySightCollision : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        if (onred && time>=timeToIncrease && player.gameObject.GetComponent<PlayerMovements>().stressLevel<=100)
+        Debug.Log(player.stressLevel);
+        if (onred && time>=timeToIncrease && player.stressLevel<=100)
         {
             time = 0;
-            player.gameObject.GetComponent<PlayerMovements>().stressLevel +=stressIncrease;
-            //Debug.Log(player.gameObject.GetComponent<PlayerMovements>().stressLevel);
+            player.stressLevel +=stressIncrease;
+            
         }
     }
 }

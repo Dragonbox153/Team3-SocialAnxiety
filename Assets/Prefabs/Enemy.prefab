@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressIncrease: 2
-  timeToIncrease: 1
+  timeToIncrease: 0.5
   player: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
 --- !u!1 &4647303682638613757
 GameObject:
