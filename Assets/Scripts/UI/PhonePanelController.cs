@@ -4,20 +4,23 @@ using UnityEngine.EventSystems;
 
 public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    public int uses = 3;
+
     public RectTransform phone; // RectTransform of the phone
-    public Button resetButton; // Button to move the phone back to the bottom right corner
+    public RectTransform phoneContent;
+    public Button resetButton;  // Button to move the phone back to the bottom right corner
+    public PlayerMovements player;
 
     [Header("Parameters")]
-    public Vector2 hoverOffset = new Vector2(0, 30f); // Offset when hovering (moving up)
-    public float moveSpeed = 2f; // Speed of the movement
-    public Vector2 centerPosition = new Vector2(-940, 546); // Position of the center of the screen
-    public Vector2 bottomRightPosition = new Vector2(-266, -216); // Position of the bottom right corner
+    public Vector2 hoverOffset = new Vector2(0, 30f);  // Offset when hovering (moving up)
+    public float moveSpeed = 2f;  // Speed of the movement
+    public Vector2 centerPosition = new Vector2(-940, 546);  // Position of the center of the screen
+    public Vector2 bottomRightPosition = new Vector2(-266, -216);  // Position of the bottom right corner
 
-    private Vector2 targetPosition; // Target position for the phone to move to
-    private bool isMoving = false; // Flag indicating if the phone is moving
-    private bool isHovering = false; // Flag indicating if the mouse is hovering over the panel
-    private Vector2 originalPosition; // Original position
-    private bool shouldReturnToBottom = false; // Flag to control if phone should return to bottom right
+    private Vector2 targetPosition;  // Target position for the phone to move to
+    private bool isMoving = false;  // Flag indicating if the phone is moving
+    private bool isHovering = false;  // Flag indicating if the mouse is hovering over the panel
+    public Vector2 originalPosition;  // Original position
 
     void Start()
     {
@@ -40,39 +43,35 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
         {
             phone.anchoredPosition = targetPosition;
             isMoving = false;
-
-            // Only return to the bottom right if `shouldReturnToBottom` is true
-            if (shouldReturnToBottom)
-            {
-                MoveToBottomRight();
-            }
         }
     }
 
     // Called when the mouse hovers over the PhonePanel
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!isMoving) // If the phone is not moving, apply the hover effect
+        if (!isMoving)  // If the phone is not moving, apply the hover effect
         {
             isHovering = true;
-            targetPosition = originalPosition + hoverOffset; // Set the target position to the hovered offset position
+            targetPosition = originalPosition + hoverOffset;  // Set the target position to the hovered offset position
         }
     }
 
     // Called when the mouse exits the PhonePanel
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (!isMoving) // If the phone is not moving, return to the original position
+        if (!isMoving)  // If the phone is not moving, return to the original position
         {
             isHovering = false;
-            targetPosition = originalPosition; // Set the target position back to the original position
         }
     }
 
     // Called when the PhonePanel is clicked
     public void OnPointerClick(PointerEventData eventData)
     {
-        MoveToCenter();
+        if(uses > 0)
+        {
+            MoveToCenter();
+        }
     }
 
     // Move the phone to the center of the screen
@@ -80,21 +79,19 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
     {
         targetPosition = centerPosition;
         isMoving = true;
-        shouldReturnToBottom = false; // Disable automatic return to bottom right
     }
 
     // Move the phone back to the bottom right corner
     public void MoveToBottomRight()
     {
-        targetPosition = bottomRightPosition;
-        originalPosition = bottomRightPosition; // Update the original position
-        isMoving = true;
-        shouldReturnToBottom = false; // Disable automatic return to bottom right
-    }
-
-    // This method allows enabling automatic return to bottom right
-    public void EnableReturnToBottom()
-    {
-        shouldReturnToBottom = true; // Enable automatic return to bottom right
+        if(phoneContent.position.y >= 195)
+        {
+            targetPosition = bottomRightPosition;
+            originalPosition = bottomRightPosition;  // Update the original position
+            isMoving = true;
+            phoneContent.position = new Vector3(0, 0, 0);
+            uses--;
+            player.stressLevel -= 25;
+        }
     }
 }
