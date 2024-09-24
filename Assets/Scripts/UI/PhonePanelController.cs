@@ -4,8 +4,12 @@ using UnityEngine.EventSystems;
 
 public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    public int uses = 3;
+
     public RectTransform phone; // RectTransform of the phone
+    public RectTransform phoneContent;
     public Button resetButton;  // Button to move the phone back to the bottom right corner
+    public PlayerMovements player;
 
     [Header("Parameters")]
     public Vector2 hoverOffset = new Vector2(0, 30f);  // Offset when hovering (moving up)
@@ -16,7 +20,7 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
     private Vector2 targetPosition;  // Target position for the phone to move to
     private bool isMoving = false;  // Flag indicating if the phone is moving
     private bool isHovering = false;  // Flag indicating if the mouse is hovering over the panel
-    private Vector2 originalPosition;  // Original position
+    public Vector2 originalPosition;  // Original position
 
     void Start()
     {
@@ -58,14 +62,16 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
         if (!isMoving)  // If the phone is not moving, return to the original position
         {
             isHovering = false;
-            targetPosition = originalPosition;  // Set the target position back to the original position
         }
     }
 
     // Called when the PhonePanel is clicked
     public void OnPointerClick(PointerEventData eventData)
     {
-        MoveToCenter();
+        if(uses > 0)
+        {
+            MoveToCenter();
+        }
     }
 
     // Move the phone to the center of the screen
@@ -78,8 +84,14 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
     // Move the phone back to the bottom right corner
     public void MoveToBottomRight()
     {
-        targetPosition = bottomRightPosition;
-        originalPosition = bottomRightPosition;  // Update the original position
-        isMoving = true;
+        if(phoneContent.position.y >= 195)
+        {
+            targetPosition = bottomRightPosition;
+            originalPosition = bottomRightPosition;  // Update the original position
+            isMoving = true;
+            phoneContent.position = new Vector3(0, 0, 0);
+            uses--;
+            player.stressLevel -= 25;
+        }
     }
 }
