@@ -62,6 +62,7 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
         if (!isMoving)  // If the phone is not moving, return to the original position
         {
             isHovering = false;
+            targetPosition = originalPosition;
         }
     }
 
@@ -89,9 +90,16 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
             targetPosition = bottomRightPosition;
             originalPosition = bottomRightPosition;  // Update the original position
             isMoving = true;
-            phoneContent.position = new Vector3(0, 0, 0);
+            phoneContent.localPosition = new Vector3(0, -200, 0);
             uses--;
-            player.stressLevel -= 25;
+            if(player.stressLevel >= 25)
+            {
+                player.stressLevel -= 25;
+            }
+            else
+            {
+                player.stressLevel = 0;
+            }
         }
     }
 }

@@ -34,7 +34,6 @@ public class EnemySightCollision : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        Debug.Log(player.stressLevel);
         if (onred && time>=timeToIncrease && player.stressLevel<=100)
         {
             time = 0;

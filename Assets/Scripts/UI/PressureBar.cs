@@ -20,10 +20,10 @@ public class PressureBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.stressLevel < 100)
+        if (player.stressLevel <= 100)
         {
             int angle = player.stressLevel / 20;
-            transform.GetChild(transform.childCount - 2).GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, (-angle * 36) + 15);
+            transform.GetChild(transform.childCount - 1).GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, (-angle * 36) + 15);
 
             if (angle > prevAngle)
             {
