@@ -12,7 +12,7 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
+  - MiniGame
   - 
   - 
   - 
@@ -50,7 +50,4 @@ TagManager:
     locked: 0
   - name: Entities
     uniqueID: 2825232209
-    locked: 0
-  - name: MiniGame
-    uniqueID: 3608306641
     locked: 0

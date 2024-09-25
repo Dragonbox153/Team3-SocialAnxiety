@@ -149,6 +149,34 @@ public partial class @CustomInputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""MiniGame"",
+            ""id"": ""a8f1908b-3a5d-422b-80a8-d84255f6eb27"",
+            ""actions"": [
+                {
+                    ""name"": ""Spam"",
+                    ""type"": ""Button"",
+                    ""id"": ""41c82aa8-c3ec-4982-a04b-f852cd86e457"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""808c65d4-e430-417a-9ab5-9b83b2eea0fe"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Spam"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -156,6 +184,9 @@ public partial class @CustomInputs: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
+        // MiniGame
+        m_MiniGame = asset.FindActionMap("MiniGame", throwIfNotFound: true);
+        m_MiniGame_Spam = m_MiniGame.FindAction("Spam", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -259,8 +290,58 @@ public partial class @CustomInputs: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // MiniGame
+    private readonly InputActionMap m_MiniGame;
+    private List<IMiniGameActions> m_MiniGameActionsCallbackInterfaces = new List<IMiniGameActions>();
+    private readonly InputAction m_MiniGame_Spam;
+    public struct MiniGameActions
+    {
+        private @CustomInputs m_Wrapper;
+        public MiniGameActions(@CustomInputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Spam => m_Wrapper.m_MiniGame_Spam;
+        public InputActionMap Get() { return m_Wrapper.m_MiniGame; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MiniGameActions set) { return set.Get(); }
+        public void AddCallbacks(IMiniGameActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MiniGameActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MiniGameActionsCallbackInterfaces.Add(instance);
+            @Spam.started += instance.OnSpam;
+            @Spam.performed += instance.OnSpam;
+            @Spam.canceled += instance.OnSpam;
+        }
+
+        private void UnregisterCallbacks(IMiniGameActions instance)
+        {
+            @Spam.started -= instance.OnSpam;
+            @Spam.performed -= instance.OnSpam;
+            @Spam.canceled -= instance.OnSpam;
+        }
+
+        public void RemoveCallbacks(IMiniGameActions instance)
+        {
+            if (m_Wrapper.m_MiniGameActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMiniGameActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MiniGameActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MiniGameActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MiniGameActions @MiniGame => new MiniGameActions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
+    }
+    public interface IMiniGameActions
+    {
+        void OnSpam(InputAction.CallbackContext context);
     }
 }

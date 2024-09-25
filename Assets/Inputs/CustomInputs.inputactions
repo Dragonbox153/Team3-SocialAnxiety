@@ -127,6 +127,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "MiniGame",
+            "id": "a8f1908b-3a5d-422b-80a8-d84255f6eb27",
+            "actions": [
+                {
+                    "name": "Spam",
+                    "type": "Button",
+                    "id": "41c82aa8-c3ec-4982-a04b-f852cd86e457",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "808c65d4-e430-417a-9ab5-9b83b2eea0fe",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spam",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
