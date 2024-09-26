@@ -610,11 +610,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
---- !u!224 &1293419892 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8339834794109040593, guid: f888f21944a335d45aac3e0f4a74d2ba, type: 3}
-  m_PrefabInstance: {fileID: 1545726111}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1335517838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5950810113181600817, guid: 24616158e3936f7459c118f889899918, type: 3}
@@ -1023,10 +1018,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1997657207}
-    - target: {fileID: 6283854449919831555, guid: f888f21944a335d45aac3e0f4a74d2ba, type: 3}
-      propertyPath: phoneContent
-      value: 
-      objectReference: {fileID: 1293419892}
+    - target: {fileID: 7691255709943593901, guid: f888f21944a335d45aac3e0f4a74d2ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
