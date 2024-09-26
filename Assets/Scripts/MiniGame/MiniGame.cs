@@ -89,6 +89,7 @@ public class MiniGame : MonoBehaviour
         gameOver = true;
         Debug.Log("Mini Game Over!");
         gameStart = false;
+        return;
     }
 
     public void StartMiniGame()
