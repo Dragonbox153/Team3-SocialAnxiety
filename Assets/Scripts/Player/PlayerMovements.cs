@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     private Rigidbody2D rb=null;
     public int stressLevel =0;
+    public MiniGame MiniGame;
 
 
     private void Awake()
@@ -51,7 +53,19 @@ public class PlayerMovements : MonoBehaviour
     {
 
         rb.velocity = moveVector*moveSpeed;
+        if (MiniGame.gameStart)
+        {
+            input.Disable();
+        }
+        else
+        {
+            input.Enable();
+        }
 
+        if(stressLevel >= 100)
+        {
+            LostGame();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,13 +74,37 @@ public class PlayerMovements : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name);
         }
+
+        if(collision.gameObject.name == "Friend")
+        {
+            //Debug.Log("MiniGame Start");
+            MiniGame?.StartMiniGame();
+
+        }
+        if(collision.gameObject.name == "Sister")
+        {
+            WonGame();
+        }
+    }
+
+    public void LostGame()
+    {
+        Debug.Log("Game is over you lost");
+    }
+
+    public void WonGame()
+    {
+        Debug.Log("Game is over you Won");
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (MiniGame == null)
+        {
+            Debug.LogError("MiniGame reference is not assigned");
+        }
     }
 
     // Update is called once per frame
