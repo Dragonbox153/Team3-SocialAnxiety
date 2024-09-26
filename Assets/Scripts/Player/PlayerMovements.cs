@@ -15,7 +15,7 @@ public class PlayerMovements : MonoBehaviour
     private Rigidbody2D rb=null;
     public int stressLevel =0;
     public MiniGame MiniGame;
-
+    public Animator animator;
 
     private void Awake()
     {
@@ -42,11 +42,21 @@ public class PlayerMovements : MonoBehaviour
     private void OnMovementPerformed(InputAction.CallbackContext value)
     {
         moveVector = value.ReadValue<Vector2>();
+        animator.SetBool("Moving", true);
+        if (moveVector.x < 0) 
+        {
+            animator.SetBool("LeftFacing", true);
+        }
+        else
+        {
+            animator.SetBool("LeftFacing", false);
+        }
     }
 
     private void OnMovementCancled(InputAction.CallbackContext value)
     {
         moveVector = Vector2.zero;
+        animator.SetBool("Moving", false);
     }
 
     private void FixedUpdate()
