@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -16,6 +17,9 @@ public class PlayerMovements : MonoBehaviour
     public int stressLevel =0;
     public MiniGame MiniGame;
     public Animator animator;
+
+    public GameObject winScreen;
+    public GameObject gameOverScreen;
 
     private void Awake()
     {
@@ -101,11 +105,18 @@ public class PlayerMovements : MonoBehaviour
     public void LostGame()
     {
         Debug.Log("Game is over you lost");
+        gameOverScreen.SetActive(true);
     }
 
     public void WonGame()
     {
         Debug.Log("Game is over you Won");
+        winScreen.SetActive(true);
+    }
+
+    public void restartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 
