@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     private Rigidbody2D rb=null;
     public int stressLevel =0;
+    public MiniGame MiniGame;
 
 
     private void Awake()
@@ -51,7 +53,14 @@ public class PlayerMovements : MonoBehaviour
     {
 
         rb.velocity = moveVector*moveSpeed;
-
+        if (MiniGame.GameStart)
+        {
+            input.Disable();
+        }
+        else
+        {
+            input.Enable();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,13 +69,23 @@ public class PlayerMovements : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name);
         }
+
+        if(collision.gameObject.name == "Friend")
+        {
+            //Debug.Log("MiniGame Start");
+            MiniGame?.StartMiniGame();
+
+        }
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (MiniGame == null)
+        {
+            Debug.LogError("MiniGame reference is not assigned");
+        }
     }
 
     // Update is called once per frame
