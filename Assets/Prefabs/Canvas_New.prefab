@@ -794,7 +794,7 @@ MonoBehaviour:
   phone: {fileID: 7206665133414563225}
   phoneContent: {fileID: 8339834794109040593}
   resetButton: {fileID: 3672983421190299956}
-  player: {fileID: 0}
+  player: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
   battery: {fileID: 3736118026309008891}
   hoverOffset: {x: 0, y: 40}
   moveSpeed: 2

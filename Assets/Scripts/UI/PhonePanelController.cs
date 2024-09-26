@@ -70,7 +70,7 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
     // Called when the PhonePanel is clicked
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(uses > 0)
+        if (uses > 0)
         {
             MoveToCenter();
         }
@@ -86,7 +86,7 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
     // Move the phone back to the bottom right corner
     public void MoveToBottomRight()
     {
-        if(phoneContent.position.y >= 195)
+        if (phoneContent.position.y >= 195)
         {
             targetPosition = bottomRightPosition;
             originalPosition = bottomRightPosition;  // Update the original position
@@ -95,7 +95,7 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
 
             uses--;
             battery.transform.GetChild(uses).gameObject.SetActive(false);
-            if(uses == 0)
+            if (uses == 0)
             {
                 phoneContent.gameObject.SetActive(false);
             }
