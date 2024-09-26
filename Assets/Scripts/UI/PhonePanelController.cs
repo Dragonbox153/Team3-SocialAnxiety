@@ -10,6 +10,7 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
     public RectTransform phoneContent;
     public Button resetButton;  // Button to move the phone back to the bottom right corner
     public PlayerMovements player;
+    public GameObject battery;
 
     [Header("Parameters")]
     public Vector2 hoverOffset = new Vector2(0, 30f);  // Offset when hovering (moving up)
@@ -62,6 +63,7 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
         if (!isMoving)  // If the phone is not moving, return to the original position
         {
             isHovering = false;
+            targetPosition = originalPosition;
         }
     }
 
@@ -89,9 +91,23 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
             targetPosition = bottomRightPosition;
             originalPosition = bottomRightPosition;  // Update the original position
             isMoving = true;
-            phoneContent.position = new Vector3(0, 0, 0);
+            phoneContent.localPosition = new Vector3(0, -200, 0);
+
             uses--;
-            player.stressLevel -= 25;
+            battery.transform.GetChild(uses).gameObject.SetActive(false);
+            if(uses == 0)
+            {
+                phoneContent.gameObject.SetActive(false);
+            }
+
+            if (player.stressLevel >= 25)
+            {
+                player.stressLevel -= 25;
+            }
+            else
+            {
+                player.stressLevel = 0;
+            }
         }
     }
 }
