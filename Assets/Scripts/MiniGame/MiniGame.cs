@@ -9,17 +9,26 @@ public class MiniGame : MonoBehaviour
     public float decreaseRate = 0.05f; 
     public float increaseAmount = 0.01f; 
     public float mGameProgress;
-    private bool gameOver = false;
+    public float[] timeLessThan = { 2,3,4,5,6};
+    public int[] stressIncreaseAmount = { 2,3,4,5,6};
+
+    PlayerMovements player;
+
     private CustomInputs input = null;
+    
+    
+    public float SecToCompleteGame=0f;
 
     public RectTransform ProgressRectTransform;
 
     public RectTransform MiniGameInterfaceRectTransform;
 
     public bool GameStart=false;
+    private bool gameOver = false;
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovements>();
         MiniGameInterfaceRectTransform.anchoredPosition = new Vector3(0, 1000, 0);
         input = new CustomInputs();
         //mGameProgress = 0.5f;
@@ -66,8 +75,38 @@ public class MiniGame : MonoBehaviour
             GameOver();
             mGameProgress = 1;
         }
+
+        if (GameStart == true)
+        {
+            SecToCompleteGame += Time.deltaTime;
+        }
         
-        Debug.Log("Game Progress: " + mGameProgress);
+        //Debug.Log("Game Progress: " + mGameProgress);
+    }
+
+    private void AddStress()
+    {
+        Debug.Log("StressAdding");
+        if (SecToCompleteGame <= timeLessThan[0])
+        {
+            player.stressLevel += stressIncreaseAmount[0];
+        }
+        else if(SecToCompleteGame <= timeLessThan[1] && SecToCompleteGame > timeLessThan[0])
+        {
+            player.stressLevel += stressIncreaseAmount[1];
+        }
+        else if (SecToCompleteGame <= timeLessThan[2] && SecToCompleteGame > timeLessThan[1])
+        {
+            player.stressLevel += stressIncreaseAmount[2];
+        }
+        else if (SecToCompleteGame <= timeLessThan[3] && SecToCompleteGame > timeLessThan[2])
+        {
+            player.stressLevel += stressIncreaseAmount[3];
+        }
+        else if (SecToCompleteGame <= timeLessThan[4] && SecToCompleteGame > timeLessThan[3])
+        {
+            player.stressLevel += stressIncreaseAmount[4];
+        }
     }
 
 
@@ -76,6 +115,8 @@ public class MiniGame : MonoBehaviour
         MiniGameInterfaceRectTransform.anchoredPosition = new Vector3(0, 1000, 0);
         gameOver = true;
         Debug.Log("Game Over!");
+        Debug.Log(SecToCompleteGame);
+        AddStress();
         GameStart = false;
     }
 
