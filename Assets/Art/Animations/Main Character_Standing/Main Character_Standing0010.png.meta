@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f17f99112d79c0c459db8023c7751c00
+=======
+guid: 760959236aa85b24aaa87f83f910b436
+>>>>>>> main
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -51,7 +55,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 320
+=======
+  spritePixelsToUnits: 100
+>>>>>>> main
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -130,8 +138,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
     nameFileIdTable:
       Main Character_Standing0010_0: -7706976243305963889
+=======
+    nameFileIdTable: {}
+>>>>>>> main
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -53,13 +53,18 @@ public class PlayerMovements : MonoBehaviour
     {
 
         rb.velocity = moveVector*moveSpeed;
-        if (MiniGame.GameStart)
+        if (MiniGame.gameStart)
         {
             input.Disable();
         }
         else
         {
             input.Enable();
+        }
+
+        if(stressLevel >= 100)
+        {
+            LostGame();
         }
     }
 
@@ -76,6 +81,20 @@ public class PlayerMovements : MonoBehaviour
             MiniGame?.StartMiniGame();
 
         }
+        if(collision.gameObject.name == "Sister")
+        {
+            WonGame();
+        }
+    }
+
+    public void LostGame()
+    {
+        Debug.Log("Game is over you lost");
+    }
+
+    public void WonGame()
+    {
+        Debug.Log("Game is over you Won");
     }
 
 

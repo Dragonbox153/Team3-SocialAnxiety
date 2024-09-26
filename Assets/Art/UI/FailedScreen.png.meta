@@ -1,14 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 99844ffd26534f0418be76eaa09ecab8
-=======
-guid: 99306998b0af8814eb14b651ff24f664
->>>>>>> main
+guid: d8a6dbd61f4624b449b79f115439f33a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6224204893683891610
-    second: Animation0001_0
+      213: -879209689375304374
+    second: FailedScreen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -104,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animation0001_0
+      name: FailedScreen_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 0
-        width: 391
-        height: 877
+        width: 1920
+        height: 1440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66249be50ae2f99a0800000000000000
-      internalID: -6224204893683891610
+      spriteID: a4514bd127b6cc3f0800000000000000
+      internalID: -879209689375304374
       vertices: []
       indices: 
       edges: []

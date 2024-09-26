@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,27 +10,23 @@ public class MiniGame : MonoBehaviour
     public float decreaseRate = 0.05f; 
     public float increaseAmount = 0.01f; 
     public float mGameProgress;
-    public float[] timeLessThan = { 2,3,4,5,6};
-    public int[] stressIncreaseAmount = { 2,3,4,5,6};
 
     PlayerMovements player;
 
     private CustomInputs input = null;
     
-    
-    public float SecToCompleteGame=0f;
 
     public RectTransform ProgressRectTransform;
 
     public RectTransform MiniGameInterfaceRectTransform;
 
-    public bool GameStart=false;
+    public bool gameStart = false;
     private bool gameOver = false;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovements>();
-        MiniGameInterfaceRectTransform.anchoredPosition = new Vector3(0, 1000, 0);
+        MiniGameInterfaceRectTransform.anchoredPosition = new Vector2(0, 1200);
         input = new CustomInputs();
         //mGameProgress = 0.5f;
     }
@@ -75,62 +72,44 @@ public class MiniGame : MonoBehaviour
             GameOver();
             mGameProgress = 1;
         }
-
-        if (GameStart == true)
+        if (mGameProgress <= 0 && gameStart)
         {
-            SecToCompleteGame += Time.deltaTime;
+            GameOver();
+            player.LostGame();
         }
         
         //Debug.Log("Game Progress: " + mGameProgress);
     }
 
-    private void AddStress()
-    {
-        Debug.Log("StressAdding");
-        if (SecToCompleteGame <= timeLessThan[0])
-        {
-            player.stressLevel += stressIncreaseAmount[0];
-        }
-        else if(SecToCompleteGame <= timeLessThan[1] && SecToCompleteGame > timeLessThan[0])
-        {
-            player.stressLevel += stressIncreaseAmount[1];
-        }
-        else if (SecToCompleteGame <= timeLessThan[2] && SecToCompleteGame > timeLessThan[1])
-        {
-            player.stressLevel += stressIncreaseAmount[2];
-        }
-        else if (SecToCompleteGame <= timeLessThan[3] && SecToCompleteGame > timeLessThan[2])
-        {
-            player.stressLevel += stressIncreaseAmount[3];
-        }
-        else if (SecToCompleteGame <= timeLessThan[4] && SecToCompleteGame > timeLessThan[3])
-        {
-            player.stressLevel += stressIncreaseAmount[4];
-        }
-    }
 
 
     private void GameOver()
     {
-        MiniGameInterfaceRectTransform.anchoredPosition = new Vector3(0, 1000, 0);
+        MiniGameInterfaceRectTransform.anchoredPosition = new Vector2(0, 1200);
         gameOver = true;
-        Debug.Log("Game Over!");
-        Debug.Log(SecToCompleteGame);
-        AddStress();
-        GameStart = false;
+        Debug.Log("Mini Game Over!");
+        gameStart = false;
     }
 
     public void StartMiniGame()
     {
-        MiniGameInterfaceRectTransform.anchoredPosition = new Vector3(0,0,0);
-        StartGame();
-        GameStart = true;
+        //Vector2.Lerp(phone.anchoredPosition, targetPosition, Time.deltaTime * moveSpeed);
+
+        if(gameOver != true && gameStart == false)
+        {
+            MiniGameInterfaceRectTransform.anchoredPosition = new Vector2(0, 0);
+            StartGame();
+        }
+        else
+        {
+            return;
+        }
     }
 
     private void StartGame()
     {
+        gameStart = true;
         input.Enable();
-        gameOver = false;
         mGameProgress = 0.5f;
         Debug.Log("Mini-Game Started!");
     }
