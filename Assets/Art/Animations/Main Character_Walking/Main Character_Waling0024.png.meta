@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Main Character_Waling0024_0: 2269108110529103735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
