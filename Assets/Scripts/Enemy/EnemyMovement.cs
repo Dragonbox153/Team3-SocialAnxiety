@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
 
     void UpdatePoint()
     {
-        if(nextPoint < movementPoints.Length - 1)
+        if (nextPoint < movementPoints.Length - 1)
         {
             nextPoint++;
         }
@@ -50,22 +50,24 @@ public class EnemyMovement : MonoBehaviour
         {
             if (lookAt.y > 0)
             {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                transform.GetChild(0).rotation = Quaternion.Euler(0, 0, 0);
             }
             else
             {
-                transform.rotation = Quaternion.Euler(0, 0, 180);
+                transform.GetChild(0).rotation = Quaternion.Euler(0, 0, 180);
             }
         }
         else
         {
             if (lookAt.x > 0)
             {
-                transform.rotation = Quaternion.Euler(0, 0, 270);
+                transform.GetChild(0).rotation = Quaternion.Euler(0, 0, 270);
+                transform.GetComponent<SpriteRenderer>().flipX = false;
             }
             else
             {
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.GetChild(0).rotation = Quaternion.Euler(0, 0, 90);
+                transform.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
     }
