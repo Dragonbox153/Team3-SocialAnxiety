@@ -1110,54 +1110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4433153645979490088, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4433153645979490088, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4513249230188363300, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898083079776898908, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898083079776898908, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898083079776898908, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5685547238997817335, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: m_Radius
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5685547238997817335, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
       propertyPath: MiniGame
       value: 
       objectReference: {fileID: 993157845}
-    - target: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: moveSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: stressLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
-      propertyPath: MiniGameStart
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
