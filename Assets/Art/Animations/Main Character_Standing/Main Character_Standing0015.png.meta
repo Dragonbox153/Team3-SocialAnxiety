@@ -139,10 +139,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     nameFileIdTable:
       Main Character_Standing0015_0: 6297278543976743431
 =======
     nameFileIdTable: {}
+>>>>>>> main
+=======
+    nameFileIdTable:
+      Main Character_Standing0015_0: 6297278543976743431
 >>>>>>> main
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

@@ -155,10 +155,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     nameFileIdTable:
       Enemy_Phase 2_Walking0007_0: 8446595707911925744
 =======
     nameFileIdTable: {}
+>>>>>>> main
+=======
+    nameFileIdTable:
+      Enemy_Phase 2_Walking0007_0: 8446595707911925744
 >>>>>>> main
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
