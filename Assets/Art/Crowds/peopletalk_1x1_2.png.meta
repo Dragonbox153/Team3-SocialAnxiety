@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      peopletalk_1x1_2_0: -6622499402317327290
+      peopletalk_1x1_2_1: -146662370644321372
+      peopletalk_1x1_2_2: 4239938927627824192
+      peopletalk_1x1_2_3: -4585341421396556347
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

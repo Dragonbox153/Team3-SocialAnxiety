@@ -178,7 +178,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      crowd_1x1_3_0: -3853630569850963326
+      crowd_1x1_3_1: 8616482914059790510
+      crowd_1x1_3_2: -5636239618916670183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
