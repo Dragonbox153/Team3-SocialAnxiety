@@ -45,11 +45,11 @@ public class PlayerMovements : MonoBehaviour
         animator.SetBool("Moving", true);
         if (moveVector.x < 0) 
         {
-            animator.SetBool("LeftFacing", true);
+            transform.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
-            animator.SetBool("LeftFacing", false);
+            transform.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
