@@ -917,6 +917,14 @@ MonoBehaviour:
   decreaseRate: 0.05
   increaseAmount: 0.05
   mGameProgress: 0
+  timeLessThan:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  stressIncreaseAmount: 0200000003000000040000000500000006000000
+  SecToCompleteGame: 0
   ProgressRectTransform: {fileID: 993157843}
   MiniGameInterfaceRectTransform: {fileID: 1866236580}
   GameStart: 0
