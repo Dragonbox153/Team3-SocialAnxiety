@@ -20,12 +20,14 @@ public class PlayerMovements : MonoBehaviour
 
     public GameObject winScreen;
     public GameObject gameOverScreen;
+    public GameObject instructionScreen;
 
     private void Awake()
     {
         input=new CustomInputs();
         rb=GetComponent<Rigidbody2D>();
         stressLevel = 0;
+        instructionScreen.SetActive(true);
     }
 
     private void OnEnable()
@@ -116,6 +118,13 @@ public class PlayerMovements : MonoBehaviour
     {
         Debug.Log("Game is over you Won");
         winScreen.SetActive(true);
+    }
+
+    public void StartMainGame()
+    {
+
+        instructionScreen.SetActive(false);
+        Debug.Log("not working");
     }
 
     public void restartGame()
