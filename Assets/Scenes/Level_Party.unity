@@ -355,6 +355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7984773795140220496, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -628,6 +632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7984773795140220496, guid: 3d4f0c3d2b8a62e4e9eed05f3bf98443, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -794,6 +802,10 @@ PrefabInstance:
     - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
       propertyPath: m_Name
       value: StaticEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6394,6 +6406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StaticEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6487,6 +6503,10 @@ PrefabInstance:
     - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
       propertyPath: m_Name
       value: StaticEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11969,6 +11989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StaticEnemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12509,6 +12533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StaticEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12787,6 +12815,10 @@ PrefabInstance:
     - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
       propertyPath: m_Name
       value: StaticEnemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141960972057148961, guid: e7cc5f24735d80344a2e75826c6597c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
