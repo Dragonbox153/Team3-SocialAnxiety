@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -15,7 +16,10 @@ public class PlayerMovements : MonoBehaviour
     private Rigidbody2D rb=null;
     public int stressLevel =0;
     public MiniGame MiniGame;
+    public Animator animator;
 
+    public GameObject winScreen;
+    public GameObject gameOverScreen;
 
     private void Awake()
     {
@@ -42,12 +46,23 @@ public class PlayerMovements : MonoBehaviour
     private void OnMovementPerformed(InputAction.CallbackContext value)
     {
         moveVector = value.ReadValue<Vector2>();
+        animator.SetBool("Moving", true);
+        if (moveVector.x < 0)
+        {
+            transform.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            transform.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     private void OnMovementCancled(InputAction.CallbackContext value)
     {
         moveVector = Vector2.zero;
+        animator.SetBool("Moving", false);
     }
+
 
     private void FixedUpdate()
     {
@@ -90,11 +105,18 @@ public class PlayerMovements : MonoBehaviour
     public void LostGame()
     {
         Debug.Log("Game is over you lost");
+        gameOverScreen.SetActive(true);
     }
 
     public void WonGame()
     {
         Debug.Log("Game is over you Won");
+        winScreen.SetActive(true);
+    }
+
+    public void restartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 

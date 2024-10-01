@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8175946156991827845}
   - component: {fileID: 4513249230188363300}
   - component: {fileID: 5685547238997817335}
+  - component: {fileID: 4404311493104917456}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -77,13 +78,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: bcf0091c531fd044cb5a2c73072ec4cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.30277777, y: 0.6962963}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -103,6 +104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   stressLevel: 0
+  MiniGame: {fileID: 0}
+  animator: {fileID: 4404311493104917456}
+  winScreen: {fileID: 6701687163537046820, guid: 509e3ce23a5c7124c93a87cc182a2709, type: 3}
 --- !u!50 &4513249230188363300
 Rigidbody2D:
   serializedVersion: 4
@@ -164,5 +168,27 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: -0.4}
+  m_Radius: 0.33
+--- !u!95 &4404311493104917456
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4433153645979490088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e105e1a327df9784cae69d7eadace5b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
