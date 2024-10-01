@@ -20,14 +20,19 @@ public class PlayerMovements : MonoBehaviour
 
     public GameObject winScreen;
     public GameObject gameOverScreen;
-    public GameObject instructionScreen;
+    public GameObject Instructions;
+
+    private bool mainGame = false;
+
+
 
     private void Awake()
     {
-        input=new CustomInputs();
-        rb=GetComponent<Rigidbody2D>();
+        Instructions.SetActive(true);
+        input = new CustomInputs();
+        rb = GetComponent<Rigidbody2D>();
         stressLevel = 0;
-        instructionScreen.SetActive(true);
+        mainGame = false;
     }
 
     private void OnEnable()
@@ -43,6 +48,12 @@ public class PlayerMovements : MonoBehaviour
         input.Disable();
         input.Player.Movement.performed -= OnMovementPerformed;
         input.Player.Movement.canceled -= OnMovementCancled;
+    }
+
+    public void StartMainGame()
+    {
+        Instructions.SetActive(false);
+        mainGame = true;
     }
 
     private void OnMovementPerformed(InputAction.CallbackContext value)
@@ -78,8 +89,16 @@ public class PlayerMovements : MonoBehaviour
         {
             input.Enable();
         }
+        if (mainGame==false)
+        {
+            input.Disable();
+        }
+        else
+        {
+            input.Enable();
+        }
 
-        if(stressLevel >= 100)
+        if (stressLevel >= 100)
         {
             LostGame();
         }
@@ -120,12 +139,7 @@ public class PlayerMovements : MonoBehaviour
         winScreen.SetActive(true);
     }
 
-    public void StartMainGame()
-    {
 
-        instructionScreen.SetActive(false);
-        Debug.Log("not working");
-    }
 
     public void restartGame()
     {
@@ -145,6 +159,6 @@ public class PlayerMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
