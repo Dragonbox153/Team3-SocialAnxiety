@@ -106,6 +106,7 @@ MonoBehaviour:
   stressLevel: 0
   MiniGame: {fileID: 0}
   animator: {fileID: 4404311493104917456}
+  winScreen: {fileID: 6701687163537046820, guid: 509e3ce23a5c7124c93a87cc182a2709, type: 3}
 --- !u!50 &4513249230188363300
 Rigidbody2D:
   serializedVersion: 4
