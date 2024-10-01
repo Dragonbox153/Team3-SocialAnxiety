@@ -441,7 +441,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   rigidbody: {fileID: 4140607513055128031}
-  speed: 20
+  speed: 5
 --- !u!114 &545476835471515689
 MonoBehaviour:
   m_ObjectHideFlags: 0
