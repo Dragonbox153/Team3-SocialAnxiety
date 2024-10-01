@@ -96,6 +96,10 @@ public class PlayerMovements : MonoBehaviour
             MiniGame?.StartMiniGame();
 
         }
+        if(collision.gameObject.tag =="Enemy")
+        {
+            LostGame();
+        }
         if(collision.gameObject.name == "Sister")
         {
             WonGame();

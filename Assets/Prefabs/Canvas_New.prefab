@@ -643,7 +643,7 @@ MonoBehaviour:
   phone: {fileID: 7206665133414563225}
   phoneContent: {fileID: 8339834794109040593}
   resetButton: {fileID: 3672983421190299956}
-  player: {fileID: 8175946156991827845, guid: a9d3987e047d6a5439dbb64bed9c9866, type: 3}
+  player: {fileID: 0}
   battery: {fileID: 3736118026309008891}
   hoverOffset: {x: 0, y: 40}
   moveSpeed: 2
@@ -2164,11 +2164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2908035300523227178, guid: 509e3ce23a5c7124c93a87cc182a2709, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 170.3794
       objectReference: {fileID: 0}
     - target: {fileID: 2908035300523227178, guid: 509e3ce23a5c7124c93a87cc182a2709, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 172.7222
       objectReference: {fileID: 0}
     - target: {fileID: 2908035300523227178, guid: 509e3ce23a5c7124c93a87cc182a2709, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2200,11 +2200,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2908035300523227178, guid: 509e3ce23a5c7124c93a87cc182a2709, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -7.099121
       objectReference: {fileID: 0}
     - target: {fileID: 2908035300523227178, guid: 509e3ce23a5c7124c93a87cc182a2709, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 2.3781738
       objectReference: {fileID: 0}
     - target: {fileID: 2908035300523227178, guid: 509e3ce23a5c7124c93a87cc182a2709, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2248,6 +2248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LostScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 916387500078878572, guid: 6f0cb1c74411e5b4ca74882ae11b2b98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023536608892188532, guid: 6f0cb1c74411e5b4ca74882ae11b2b98, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2274,11 +2278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023536608892188532, guid: 6f0cb1c74411e5b4ca74882ae11b2b98, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 155.7861
       objectReference: {fileID: 0}
     - target: {fileID: 3023536608892188532, guid: 6f0cb1c74411e5b4ca74882ae11b2b98, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 151.9663
       objectReference: {fileID: 0}
     - target: {fileID: 3023536608892188532, guid: 6f0cb1c74411e5b4ca74882ae11b2b98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2310,11 +2314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023536608892188532, guid: 6f0cb1c74411e5b4ca74882ae11b2b98, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.19750977
       objectReference: {fileID: 0}
     - target: {fileID: 3023536608892188532, guid: 6f0cb1c74411e5b4ca74882ae11b2b98, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -7.9993896
       objectReference: {fileID: 0}
     - target: {fileID: 3023536608892188532, guid: 6f0cb1c74411e5b4ca74882ae11b2b98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
