@@ -21,7 +21,7 @@ public class MiniGame : MonoBehaviour
     public RectTransform MiniGameInterfaceRectTransform;
 
     public bool gameStart = false;
-    private bool gameOver = false;
+    public bool gameOver = false;
 
     private void Awake()
     {
