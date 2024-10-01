@@ -46,7 +46,6 @@ public class EnemyMovement : MonoBehaviour
     void RotateEnemy()
     {
         Vector3 lookAt = movementPoints[nextPoint].transform.position - transform.position;
-        Debug.Log(lookAt);
         if (lookAt.x == 0)
         {
             if (lookAt.y > 0)

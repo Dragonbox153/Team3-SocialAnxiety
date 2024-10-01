@@ -20,7 +20,6 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
 
     private Vector2 targetPosition;  // Target position for the phone to move to
     private bool isMoving = false;  // Flag indicating if the phone is moving
-    private bool isHovering = false;  // Flag indicating if the mouse is hovering over the panel
     public Vector2 originalPosition;  // Original position
 
     void Start()
@@ -52,7 +51,6 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
     {
         if (!isMoving)  // If the phone is not moving, apply the hover effect
         {
-            isHovering = true;
             targetPosition = originalPosition + hoverOffset;  // Set the target position to the hovered offset position
         }
     }
@@ -62,7 +60,6 @@ public class PhonePanelController : MonoBehaviour, IPointerEnterHandler, IPointe
     {
         if (!isMoving)  // If the phone is not moving, return to the original position
         {
-            isHovering = false;
             targetPosition = originalPosition;
         }
     }
