@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: EyeWall2 1
+  m_Name: EyeWall2
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 7272577106738767055, guid: 87296fee6472f4f4abc9c59af88fa61c, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: b5193077e679e4642af8d78768308a66, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules: []
