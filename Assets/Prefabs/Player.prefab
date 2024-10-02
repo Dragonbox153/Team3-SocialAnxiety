@@ -109,7 +109,8 @@ MonoBehaviour:
   animator: {fileID: 4404311493104917456}
   winScreen: {fileID: 0}
   gameOverScreen: {fileID: 0}
-  Instructions: {fileID: 4907224221399166369, guid: 5e25b8c662062e64ab778cb0c77c4e50, type: 3}
+  Instructions: {fileID: 0}
+  StartScreen: {fileID: 0}
 --- !u!50 &4513249230188363300
 Rigidbody2D:
   serializedVersion: 4

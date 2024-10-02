@@ -21,6 +21,7 @@ public class PlayerMovements : MonoBehaviour
     public GameObject winScreen;
     public GameObject gameOverScreen;
     public GameObject Instructions;
+    public GameObject StartScreen;
 
     private bool mainGame = false;
 
@@ -28,7 +29,8 @@ public class PlayerMovements : MonoBehaviour
 
     private void Awake()
     {
-        Instructions.SetActive(true);
+        StartScreen.SetActive(true);
+        //Instructions.SetActive(true);
         input = new CustomInputs();
         rb = GetComponent<Rigidbody2D>();
         stressLevel = 0;
@@ -54,6 +56,13 @@ public class PlayerMovements : MonoBehaviour
     {
         Instructions.SetActive(false);
         mainGame = true;
+    }
+
+    public void StartInstructions()
+    {
+        StartScreen.SetActive(false);
+        Debug.Log("Hi");
+        Instructions.SetActive(true);
     }
 
     private void OnMovementPerformed(InputAction.CallbackContext value)

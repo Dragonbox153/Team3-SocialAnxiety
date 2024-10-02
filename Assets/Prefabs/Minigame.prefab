@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1196812412716791244, guid: 44d6a983e9cecc144bbc76f7915519b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -280,11 +280,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decreaseRate: 0.05
-  increaseAmount: 0.05
+  increaseAmount: 0.0175
   mGameProgress: 0
   ProgressRectTransform: {fileID: 776864781874539372}
   MiniGameInterfaceRectTransform: {fileID: 7282132542285580177}
   gameStart: 0
+  gameOver: 0
 --- !u!114 &8616348149439333982
 MonoBehaviour:
   m_ObjectHideFlags: 0
