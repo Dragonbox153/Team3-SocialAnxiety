@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mini Game_Background_0: 1196812412716791244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sister_Standing0018_0: -4204417489144278918
+      Sister_Standing0018_1: -197832345265511341
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

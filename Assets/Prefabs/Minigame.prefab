@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1196812412716791244, guid: 77a3a58fad6dca14ca2189de436349e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -143,7 +143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 18, y: -231}
   m_SizeDelta: {x: 1300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7014547576753172244
@@ -285,6 +285,7 @@ MonoBehaviour:
   ProgressRectTransform: {fileID: 776864781874539372}
   MiniGameInterfaceRectTransform: {fileID: 7282132542285580177}
   gameStart: 0
+  gameOver: 0
 --- !u!114 &8616348149439333982
 MonoBehaviour:
   m_ObjectHideFlags: 0
