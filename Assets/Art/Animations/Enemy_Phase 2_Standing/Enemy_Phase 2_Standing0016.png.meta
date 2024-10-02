@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy_Phase 2_Standing0016_0: -3501602613263309815
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
