@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class AudioControl : MonoBehaviour
 {
+    PlayerMovements player;
+
     public AudioSource audioSource1; 
     public AudioSource audioSource2; 
 
@@ -20,14 +22,14 @@ public class AudioControl : MonoBehaviour
 
     void Start()
     {
-   
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerMovements>();
         PlayBothSounds();
     }
 
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isFading)
+        if (player.stressLevel >= 50 && !isFading)
         {
             StartCoroutine(FadeSounds());
         }

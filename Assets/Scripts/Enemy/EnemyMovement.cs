@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (transform.position != movementPoints[nextPoint].transform.position)
         {
