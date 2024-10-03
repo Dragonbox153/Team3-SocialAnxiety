@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 44d6a983e9cecc144bbc76f7915519b8
+guid: f8bb5ec64a2da094ca8876cf60a45389
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1196812412716791244
-    second: Mini Game_Background_0
+      213: 4332824213948493547
+    second: Mini Game_slides 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mini Game_Background_0
+      name: Mini Game_slides 2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc533c26c8eeb9010800000000000000
-      internalID: 1196812412716791244
+      spriteID: bee6c929aa8412c30800000000000000
+      internalID: 4332824213948493547
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mini Game_Background_0: 1196812412716791244
+      Mini Game_slides 2_0: 4332824213948493547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

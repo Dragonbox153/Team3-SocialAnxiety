@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 44d6a983e9cecc144bbc76f7915519b8
+guid: c0aa9d2904596214c801d3087ff01977
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1196812412716791244
-    second: Mini Game_Background_0
+      213: -4285912781937344244
+    second: GreenBar Texture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mini Game_Background_0
+      name: GreenBar Texture_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1520
-        height: 980
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc533c26c8eeb9010800000000000000
-      internalID: 1196812412716791244
+      spriteID: c01815658016584c0800000000000000
+      internalID: -4285912781937344244
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mini Game_Background_0: 1196812412716791244
+      GreenBar Texture_0: -4285912781937344244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
