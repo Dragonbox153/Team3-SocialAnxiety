@@ -11,6 +11,10 @@ public class MiniGame : MonoBehaviour
     public float increaseAmount = 0.01f; 
     public float mGameProgress;
 
+    public GameObject MinigameSlide1;
+    public GameObject MinigameSlide2;
+    public GameObject MinigameSlide3;
+
     PlayerMovements player;
 
     private CustomInputs input = null;
@@ -25,6 +29,9 @@ public class MiniGame : MonoBehaviour
 
     private void Awake()
     {
+        MinigameSlide1.SetActive(false);
+        MinigameSlide2.SetActive(false);
+        MinigameSlide3.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovements>();
         MiniGameInterfaceRectTransform.anchoredPosition = new Vector2(0, 1200);
         input = new CustomInputs();
@@ -69,7 +76,8 @@ public class MiniGame : MonoBehaviour
 
         if (mGameProgress >= 0.95f && !gameOver)
         {
-            GameOver();
+            //GameOver();
+            StartMiniGameSlide3();
             mGameProgress = 1;
         }
         if (mGameProgress <= 0 && gameStart)
@@ -92,19 +100,39 @@ public class MiniGame : MonoBehaviour
         return;
     }
 
+    public void exitMiniGame()
+    {
+        GameOver();
+    }
+
+    public void StartMiniGameSlide3()
+    {
+        MinigameSlide2.SetActive(false);
+        MinigameSlide3.SetActive(true);
+    }
+
     public void StartMiniGame()
     {
-        //Vector2.Lerp(phone.anchoredPosition, targetPosition, Time.deltaTime * moveSpeed);
-
-        if(gameOver != true && gameStart == false)
+        if (gameOver != true && gameStart == false)
         {
             MiniGameInterfaceRectTransform.anchoredPosition = new Vector2(0, 0);
-            StartGame();
+            
+            MinigameSlide1.SetActive(true);
         }
         else
         {
             return;
         }
+        //Vector2.Lerp(phone.anchoredPosition, targetPosition, Time.deltaTime * moveSpeed);
+        
+        
+    }
+
+    public void StartMiniGameSlide2()
+    {
+        MinigameSlide1.SetActive(false);
+        MinigameSlide2.SetActive(true);
+        StartGame();
     }
 
     private void StartGame()
